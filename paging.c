@@ -38,15 +38,27 @@ load_process(PCB *pcb, unsigned char *loader_buffer, FILE *file, int page_size) 
     unsigned char process_id = loader_buffer[0];
 // – Code Segment size (bytes 1-2):
     unsigned short code_segment_size = loader_buffer[1] << 8 | loader_buffer[2]; // << 8 is equivalent to * 256
+    printf("Code Segment size: %d bytes\n", code_segment_size);
+
 // ∗ Next 48 bytes will be loaded in the code segment
-    fseek(file, code_segment_size, SEEK_CUR); // skip the code segment
+    
+// – Data Segment (Following the data segment size bytes)
+    unsigned char code_segment[code_segment_size];
+        for (int i = 0; i < code_segment_size; i++) {
+            code_segment[i] = loader_buffer[3 + i];
+        }
 
 // – Data Segment size (2 bytes following the end of code segment):
-    unsigned short data_segment_size = loader_buffer[3] << 8 | loader_buffer[4]; // << 8 is equivalent to * 256
+    unsigned short data_segment_size = loader_buffer[3 + code_segment_size] << 8 | loader_buffer[4 + code_segment_size];
+    printf("Data Segment size: %d bytes\n", data_segment_size);
 
-// – Data Segment (Following the data segment size bytes)
+    unsigned char data_segment[data_segment_size];
+        for (int i = 0; i < data_segment_size; i++) {
+            data_segment[i] = loader_buffer[5 + code_segment_size + i];
+        }
 
-    fseek(file, data_segment_size, SEEK_CUR); // skip the data segment
+
+
 // – End of Process: 0xFF marks the end of the file. If after the data segment bytes 0xFF
 
     pcb->process_id = process_id;
@@ -92,7 +104,14 @@ int calculate_internal_fragmentation(PCB *pcb, int page_size) {
     return page_size - last_page_size;
 }
 
-
+void print_buffer(unsigned char *buffer, size_t size) {
+    printf("Content loaded into buffer:\n");
+    for (size_t i = 0; i < size; ++i) {
+        // convert to decimal: 
+        printf("Byte %zu:  hex=0x%02X, dec=%d\n", i, buffer[i], buffer[i]);
+    
+    }
+}
 int main(int argc, char *argv[]) {
 
     if (argc < 5) {
@@ -124,7 +143,7 @@ int main(int argc, char *argv[]) {
         // read from the binary files
     for (int i_process = 0; i_process < num_processes; i_process++){
             printf("Process %d/%d\n", i_process+1, num_processes);
-            unsigned char buffer[10];
+            // unsigned char buffer[10];
             unsigned char loader_buffer[95];
                 FILE *ptr;
                 char filename[25];
@@ -134,51 +153,17 @@ int main(int argc, char *argv[]) {
                     printf("Error opening file");
                     return 1;
                 }
-                size_t result = 0;
-                int b = 0;
-                // 0xFF marks the end of the file.
-                int counter = 0;
-                bool signal = false;
-                while ((result = fread(buffer,1, sizeof(buffer),ptr)) > 0){
 
-      
-                    for(size_t i = 0; i < result; i++){
-
-                        printf("Byte %d:  hex=0x%02X\n", b, buffer[i]);
-                    // copy the buffer into main loader buffer
-                        loader_buffer[b] = buffer[i];
-                        b++;
-
-                        if (buffer[i] == 0xFF){
-                            printf("End of file reached\n");
-                            // fclose(ptr);
-                            signal = true;
-                   
-                            break; // exit the for loop
-                        }
-                        
-                    }
-                    counter++;
-                    if (signal == true){
-                        printf("EOF reached...BREAKING..\n");
-                        break; // exit the while loop
-                    }
-                    else if(counter > 95){
-                              fprintf(stderr, "Error: Process file %s is malformed.\n", filename);
-                              exit(EXIT_FAILURE);
-                    }
-                }
-                if (!signal){
-                    printf("Exception: 0xFF not found\n");
-                }
-
-                fclose(ptr);
+                // copy the file into the buffer
+                fread(loader_buffer, 1, sizeof(loader_buffer), ptr);
+                printf("File %s loaded into buffer\n", filename);
+                // print_buffer(loader_buffer, sizeof(loader_buffer));
+               
                 // load the process
+
                 pcb_list[i_process].process_file_name = filename;
                 load_process(&pcb_list[i_process], loader_buffer, ptr, page_size);
-
-
-
+                fclose(ptr);
 
 //                Allocate Frames and Internal Fragmentation:
                 allocate_frames(&pcb_list[i_process], page_size, &free_frames);
@@ -202,7 +187,7 @@ int main(int argc, char *argv[]) {
 
     printf("\nFree Frame List:\n");
     for (int i = 0; i < free_frames.count; ++i) {
-        printf("  Frame %d\n", free_frames.frames[i]);
+        printf("  Frame %d  ", free_frames.frames[i]);
     }
 
     printf("\nTotal Internal Fragmentation: %d bytes\n", total_internal_fragmentation);
@@ -213,7 +198,7 @@ int main(int argc, char *argv[]) {
     }
     free(pcb_list);
     free(free_frames.frames);
-    // free(free_frames);
+
 
 
     return 0;

@@ -1,224 +1,26 @@
 ./paging 1048576 12 1024 "p1.proc" "p2.proc" "p3.proc"
 Process 1/3
-Byte 0:  hex=0x9D
-Byte 1:  hex=0x00
-Byte 2:  hex=0x1E
-Byte 3:  hex=0x17
-Byte 4:  hex=0x28
-Byte 5:  hex=0x96
-Byte 6:  hex=0xBF
-Byte 7:  hex=0x50
-Byte 8:  hex=0x35
-Byte 9:  hex=0x36
-Byte 10:  hex=0xD4
-Byte 11:  hex=0x6A
-Byte 12:  hex=0x69
-Byte 13:  hex=0x35
-Byte 14:  hex=0x64
-Byte 15:  hex=0xC7
-Byte 16:  hex=0x99
-Byte 17:  hex=0x62
-Byte 18:  hex=0xDB
-Byte 19:  hex=0x0A
-Byte 20:  hex=0x76
-Byte 21:  hex=0xB5
-Byte 22:  hex=0x38
-Byte 23:  hex=0x11
-Byte 24:  hex=0xE5
-Byte 25:  hex=0x79
-Byte 26:  hex=0xBB
-Byte 27:  hex=0x05
-Byte 28:  hex=0x16
-Byte 29:  hex=0x5E
-Byte 30:  hex=0x5F
-Byte 31:  hex=0x93
-Byte 32:  hex=0xFC
-Byte 33:  hex=0x00
-Byte 34:  hex=0x3C
-Byte 35:  hex=0xFC
-Byte 36:  hex=0xAB
-Byte 37:  hex=0x25
-Byte 38:  hex=0x93
-Byte 39:  hex=0x6A
-Byte 40:  hex=0x75
-Byte 41:  hex=0xC8
-Byte 42:  hex=0xA0
-Byte 43:  hex=0x49
-Byte 44:  hex=0x32
-Byte 45:  hex=0x09
-Byte 46:  hex=0x7F
-Byte 47:  hex=0x97
-Byte 48:  hex=0xD0
-Byte 49:  hex=0x18
-Byte 50:  hex=0xF9
-Byte 51:  hex=0xAC
-Byte 52:  hex=0x23
-Byte 53:  hex=0x70
-Byte 54:  hex=0x61
-Byte 55:  hex=0x5B
-Byte 56:  hex=0x81
-Byte 57:  hex=0x46
-Byte 58:  hex=0xD4
-Byte 59:  hex=0x3D
-Byte 60:  hex=0x4B
-Byte 61:  hex=0xEB
-Byte 62:  hex=0x9B
-Byte 63:  hex=0xAA
-Byte 64:  hex=0x7E
-Byte 65:  hex=0x97
-Byte 66:  hex=0xA6
-Byte 67:  hex=0x29
-Byte 68:  hex=0xBC
-Byte 69:  hex=0x39
-Byte 70:  hex=0x94
-Byte 71:  hex=0x31
-Byte 72:  hex=0x02
-Byte 73:  hex=0x34
-Byte 74:  hex=0x7B
-Byte 75:  hex=0x34
-Byte 76:  hex=0x3E
-Byte 77:  hex=0xFA
-Byte 78:  hex=0xCB
-Byte 79:  hex=0x0E
-Byte 80:  hex=0x12
-Byte 81:  hex=0xC5
-Byte 82:  hex=0xBA
-Byte 83:  hex=0x35
-Byte 84:  hex=0x35
-Byte 85:  hex=0x1B
-Byte 86:  hex=0x91
-Byte 87:  hex=0xB6
-Byte 88:  hex=0x61
-Byte 89:  hex=0x65
-Byte 90:  hex=0xF3
-Byte 91:  hex=0xAC
-Byte 92:  hex=0x50
-Byte 93:  hex=0x8E
-Byte 94:  hex=0x56
-Byte 95:  hex=0xFF
-End of file reached
-EOF reached...BREAKING..
-Internal Fragmentation for Process ID 157: 186 bytes
+File p1.proc loaded into buffer
+Code Segment size: 30 bytes
+Data Segment size: 60 bytes
+Internal Fragmentation for Process ID 157: 934 bytes
 Process 2/3
-Byte 0:  hex=0xA9
-Byte 1:  hex=0x00
-Byte 2:  hex=0x1E
-Byte 3:  hex=0x72
-Byte 4:  hex=0x55
-Byte 5:  hex=0xCE
-Byte 6:  hex=0xD4
-Byte 7:  hex=0x7B
-Byte 8:  hex=0x83
-Byte 9:  hex=0xF1
-Byte 10:  hex=0xE1
-Byte 11:  hex=0x2B
-Byte 12:  hex=0x8E
-Byte 13:  hex=0x56
-Byte 14:  hex=0x6A
-Byte 15:  hex=0x54
-Byte 16:  hex=0x65
-Byte 17:  hex=0x65
-Byte 18:  hex=0x0F
-Byte 19:  hex=0x19
-Byte 20:  hex=0x34
-Byte 21:  hex=0x04
-Byte 22:  hex=0x5F
-Byte 23:  hex=0xAC
-Byte 24:  hex=0x10
-Byte 25:  hex=0x9B
-Byte 26:  hex=0x26
-Byte 27:  hex=0x22
-Byte 28:  hex=0xFF
-End of file reached
-EOF reached...BREAKING..
-Internal Fragmentation for Process ID 169: 397 bytes
+File p2.proc loaded into buffer
+Code Segment size: 30 bytes
+Data Segment size: 60 bytes
+Internal Fragmentation for Process ID 169: 934 bytes
 Process 3/3
-Byte 0:  hex=0xCA
-Byte 1:  hex=0x00
-Byte 2:  hex=0x1E
-Byte 3:  hex=0x81
-Byte 4:  hex=0x87
-Byte 5:  hex=0x84
-Byte 6:  hex=0x0C
-Byte 7:  hex=0x42
-Byte 8:  hex=0xB2
-Byte 9:  hex=0x0E
-Byte 10:  hex=0xFF
-End of file reached
-EOF reached...BREAKING..
-Internal Fragmentation for Process ID 202: 603 bytes
+File p3.proc loaded into buffer
+Code Segment size: 30 bytes
+Data Segment size: 60 bytes
+Internal Fragmentation for Process ID 202: 934 bytes
 Memory Dump:
 Process ID: 157, File: p3.proc
   Page 0 -> Frame 1023 (Valid: 1)
-  Page 1 -> Frame 1022 (Valid: 1)
-  Page 2 -> Frame 1021 (Valid: 1)
-  Page 3 -> Frame 1020 (Valid: 1)
-  Page 4 -> Frame 1019 (Valid: 1)
-  Page 5 -> Frame 1018 (Valid: 1)
 Process ID: 169, File: p3.proc
-  Page 0 -> Frame 1017 (Valid: 1)
-  Page 1 -> Frame 1016 (Valid: 1)
-  Page 2 -> Frame 1015 (Valid: 1)
-  Page 3 -> Frame 1014 (Valid: 1)
-  Page 4 -> Frame 1013 (Valid: 1)
-  Page 5 -> Frame 1012 (Valid: 1)
-  Page 6 -> Frame 1011 (Valid: 1)
-  Page 7 -> Frame 1010 (Valid: 1)
-  Page 8 -> Frame 1009 (Valid: 1)
-  Page 9 -> Frame 1008 (Valid: 1)
-  Page 10 -> Frame 1007 (Valid: 1)
-  Page 11 -> Frame 1006 (Valid: 1)
-  Page 12 -> Frame 1005 (Valid: 1)
-  Page 13 -> Frame 1004 (Valid: 1)
-  Page 14 -> Frame 1003 (Valid: 1)
-  Page 15 -> Frame 1002 (Valid: 1)
-  Page 16 -> Frame 1001 (Valid: 1)
-  Page 17 -> Frame 1000 (Valid: 1)
-  Page 18 -> Frame 999 (Valid: 1)
-  Page 19 -> Frame 998 (Valid: 1)
-  Page 20 -> Frame 997 (Valid: 1)
-  Page 21 -> Frame 996 (Valid: 1)
-  Page 22 -> Frame 995 (Valid: 1)
-  Page 23 -> Frame 994 (Valid: 1)
-  Page 24 -> Frame 993 (Valid: 1)
-  Page 25 -> Frame 992 (Valid: 1)
-  Page 26 -> Frame 991 (Valid: 1)
-  Page 27 -> Frame 990 (Valid: 1)
-  Page 28 -> Frame 989 (Valid: 1)
+  Page 0 -> Frame 1022 (Valid: 1)
 Process ID: 202, File: p3.proc
-  Page 0 -> Frame 988 (Valid: 1)
-  Page 1 -> Frame 987 (Valid: 1)
-  Page 2 -> Frame 986 (Valid: 1)
-  Page 3 -> Frame 985 (Valid: 1)
-  Page 4 -> Frame 984 (Valid: 1)
-  Page 5 -> Frame 983 (Valid: 1)
-  Page 6 -> Frame 982 (Valid: 1)
-  Page 7 -> Frame 981 (Valid: 1)
-  Page 8 -> Frame 980 (Valid: 1)
-  Page 9 -> Frame 979 (Valid: 1)
-  Page 10 -> Frame 978 (Valid: 1)
-  Page 11 -> Frame 977 (Valid: 1)
-  Page 12 -> Frame 976 (Valid: 1)
-  Page 13 -> Frame 975 (Valid: 1)
-  Page 14 -> Frame 974 (Valid: 1)
-  Page 15 -> Frame 973 (Valid: 1)
-  Page 16 -> Frame 972 (Valid: 1)
-  Page 17 -> Frame 971 (Valid: 1)
-  Page 18 -> Frame 970 (Valid: 1)
-  Page 19 -> Frame 969 (Valid: 1)
-  Page 20 -> Frame 968 (Valid: 1)
-  Page 21 -> Frame 967 (Valid: 1)
-  Page 22 -> Frame 966 (Valid: 1)
-  Page 23 -> Frame 965 (Valid: 1)
-  Page 24 -> Frame 964 (Valid: 1)
-  Page 25 -> Frame 963 (Valid: 1)
-  Page 26 -> Frame 962 (Valid: 1)
-  Page 27 -> Frame 961 (Valid: 1)
-  Page 28 -> Frame 960 (Valid: 1)
-  Page 29 -> Frame 959 (Valid: 1)
-  Page 30 -> Frame 958 (Valid: 1)
-  Page 31 -> Frame 957 (Valid: 1)
-  Page 32 -> Frame 956 (Valid: 1)
+  Page 0 -> Frame 1021 (Valid: 1)
 
 Free Frame List:
   Frame 0
@@ -1177,5 +979,70 @@ Free Frame List:
   Frame 953
   Frame 954
   Frame 955
+  Frame 956
+  Frame 957
+  Frame 958
+  Frame 959
+  Frame 960
+  Frame 961
+  Frame 962
+  Frame 963
+  Frame 964
+  Frame 965
+  Frame 966
+  Frame 967
+  Frame 968
+  Frame 969
+  Frame 970
+  Frame 971
+  Frame 972
+  Frame 973
+  Frame 974
+  Frame 975
+  Frame 976
+  Frame 977
+  Frame 978
+  Frame 979
+  Frame 980
+  Frame 981
+  Frame 982
+  Frame 983
+  Frame 984
+  Frame 985
+  Frame 986
+  Frame 987
+  Frame 988
+  Frame 989
+  Frame 990
+  Frame 991
+  Frame 992
+  Frame 993
+  Frame 994
+  Frame 995
+  Frame 996
+  Frame 997
+  Frame 998
+  Frame 999
+  Frame 1000
+  Frame 1001
+  Frame 1002
+  Frame 1003
+  Frame 1004
+  Frame 1005
+  Frame 1006
+  Frame 1007
+  Frame 1008
+  Frame 1009
+  Frame 1010
+  Frame 1011
+  Frame 1012
+  Frame 1013
+  Frame 1014
+  Frame 1015
+  Frame 1016
+  Frame 1017
+  Frame 1018
+  Frame 1019
+  Frame 1020
 
-Total Internal Fragmentation: 1186 bytes
+Total Internal Fragmentation: 2802 bytes

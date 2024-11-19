@@ -8,8 +8,7 @@ run:
 
 # Clean target
 clean:
-	rm -f paging p1.proc p2.proc p3.proc
-
+	rm -f paging
 # Generate process files and run tests
 test: build p1.proc p2.proc p3.proc
 	@echo "Running Tests..."
